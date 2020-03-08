@@ -13,7 +13,6 @@
         font-family: $primary-font;
         font-weight: 700;
         font-size: 1rem;
-        transition: font-size 0.2s;
 	}
 	svg {
 		width: 3rem;
@@ -22,9 +21,7 @@
 		transform: translateX(-50%);
 		position: relative;
         fill: $primary-text-color;
-        transition: width 0.2s, height 0.2s;
         animation: bounce 2s;
-
 	}
 }
 
@@ -36,13 +33,9 @@
 
 .cv-download:hover {
 	label {
-        font-size: 1.2rem;
         color: $secondary-color;
-        font-weight: 800;
 	}
 	svg {
-        width: 3.5rem;
-        height: 3.5rem;
 		fill: $secondary-color;
 	}
 }

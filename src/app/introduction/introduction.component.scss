@@ -35,7 +35,13 @@
 		margin: 5rem;
 		font-family: $primary-font;
         position: fixed;
+        animation: fadeIn ease 1s;
 
+        @media only screen and (min-device-width: 1080px) {
+            top: 2rem;
+            left: 3rem;
+        }
+        
 		@media only screen and (max-device-width: 1024px),
 			only screen and (max-device-width: 1400px) and (orientation: landscape) {
 			transform: translateX(-50%);
@@ -43,8 +49,13 @@
 			top: 15%;
 			position: relative;
 			margin: 0;
-			width: calc(100vw - 8rem);
-		}
+            width: calc(100vw - 8rem);
+            animation: fadeInMobile ease 1s;
+        }
+        
+        @media only screen and (max-device-width: 1023px) and (orientation: landscape) {
+            top:30%;
+        }
 
 		.introduction--content__header {
 			font-size: 4.5rem;
@@ -128,4 +139,26 @@
 			display: none;
 		}
     }
+
+    @keyframes fadeIn {
+        0% {
+          opacity:0;
+          left: -1rem;
+        }
+        100% {
+          opacity:1;
+          left: 3rem;
+        }
+      }
+
+      @keyframes fadeInMobile {
+        0% {
+          opacity:0;
+          left: 44%;
+        }
+        100% {
+          opacity:1;
+          left: 50%;
+        }
+      }
 }

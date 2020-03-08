@@ -1,0 +1,19 @@
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/colors";
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 1.5rem;
+    margin-top: 1.0rem;
+    position: fixed;
+}
+
+.header--name{
+    margin-left: 8rem;
+    margin-top: 1.0rem;
+    position: fixed;
+    font-size: 2.4rem;
+    font-weight: 300;
+    font-family: $primary-font;
+    border-bottom: 1px solid $secondary-text-color;
+}

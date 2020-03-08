@@ -5,6 +5,7 @@ import { ParticlesModule } from 'angular-particle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './root/app.component';
 import { IntroductionModule } from './introduction/introduction.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
 	declarations: [
@@ -14,6 +15,7 @@ import { IntroductionModule } from './introduction/introduction.module';
 		BrowserModule,
 		AppRoutingModule,
 		ParticlesModule,
+		SharedModule,
 		IntroductionModule // TODO: remove this and implement lazy loading
 	],
 	providers: [],
