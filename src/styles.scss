@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/styles/colors";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: $primary-color;
+}
+
+.hidden-mobile {
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
+
+// .hidden-mobile--portrait {
+// 	@media only screen and (max-device-width: 1024px) {
+// 		display: none;
+// 	}
+// 	@media only screen and (max-device-width: 1400px) and (orientation: landscape) {
+// 		display: none;
+// 	}
+// }
+
+.color--highlight {
+	color: $secondary-color;
+}

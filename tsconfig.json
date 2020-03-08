@@ -17,7 +17,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@images": ["./src/assets/images-temp"],
+      "@styles": ["./src/assets/styles"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
