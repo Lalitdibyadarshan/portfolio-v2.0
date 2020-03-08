@@ -7,7 +7,7 @@
 	margin-bottom: 2rem;
 	margin-right: 4rem;
 	label {
-		left: 23%;
+		left: 5%;
 		transform: translateX(-50%);
         position: relative;
         font-family: $primary-font;
@@ -34,9 +34,11 @@
 .cv-download:hover {
 	label {
         color: $secondary-color;
+        cursor: pointer;
 	}
 	svg {
-		fill: $secondary-color;
+        fill: $secondary-color;
+        cursor: pointer;
 	}
 }
 

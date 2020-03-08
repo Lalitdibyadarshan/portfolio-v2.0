@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 	width: number = 100;
 	height: number = 100;
 
-	private _numberOfParticles = 40;
+	private _numberOfParticles = 30;
 	private _particleColor = '#ffffff';
 
 
