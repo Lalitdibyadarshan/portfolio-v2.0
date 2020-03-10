@@ -5,34 +5,27 @@
 	bottom: 0;
 	right: 0;
 	margin-bottom: 1.8rem;
-    margin-right: 4rem;
-    z-index: 999;
+	margin-right: 4rem;
+	z-index: 999;
 
 	.cv-download--label {
-        position: absolute;
-        width: max-content;
+		position: absolute;
+		width: max-content;
 		font-family: $primary-font;
 		font-weight: 700;
 		font-size: 1rem;
-        color: $primary-text-color;
-        display: block;
-        @media only screen and (max-device-width: 750px) and (orientation: portrait),
-        only screen and (max-width: 1020px) and (orientation: landscape) {
-            display: none;
-		}		
-	}
-	.cv-download--label--mobile {
-        position: absolute;
-        width: max-content;
-		font-family: $primary-font;
-		font-weight: 700;
-		font-size: 1rem;
-        color: $primary-text-color;
-        display: block;
-        @media only screen and (max-device-width: 768px),
-        only screen and (max-width: 1024px) and (orientation: landscape) {
-            font-size: 0.7rem;
-        }
+		color: $primary-text-color;
+		display: block;
+		
+		@media only screen and (max-device-width: 768px),
+			only screen and (max-width: 1024px) and (orientation: landscape) {
+			font-size: 0.7rem;
+		}
+
+		@media only screen and (max-device-width: 750px) and (orientation: portrait),
+			only screen and (max-width: 1020px) and (orientation: landscape) {
+			display: none;
+		}
 	}
 
 	.download {
@@ -42,21 +35,17 @@
 		transform: translateX(-50%);
 		position: relative;
 		animation: bounce 2s;
-        fill: $primary-text-color;
-        
-        @media only screen 
-        and (min-device-width: 768px)
-        and (orientation: portrait),
-        only screen 
-        and (min-device-width: 1024px) 
-        and (orientation: landscape) {
-            width: 2.5rem;
-        }
+		fill: $primary-text-color;
+
+		@media only screen and (min-device-width: 768px) and (orientation: portrait),
+			only screen and (min-device-width: 1024px) and (orientation: landscape) {
+			width: 2.5rem;
+		}
 
 		@media only screen and (max-device-width: 750px) and (orientation: portrait),
 			only screen and (max-width: 1020px) and (orientation: landscape) {
 			display: none;
-        }
+		}
 	}
 
 	.download-mobile {
@@ -74,9 +63,7 @@
 		}
 	}
 
-
-    @media only screen and (max-device-width: 750px),
-        only screen and (max-width: 1020px) and (orientation: landscape) {
+	@media only screen and (max-device-width: 750px), only screen and (max-width: 1020px) and (orientation: landscape) {
 		top: 0;
 		margin-top: 0.6rem;
 		margin-right: 2.5rem;
