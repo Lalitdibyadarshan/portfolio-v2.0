@@ -1,0 +1,127 @@
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/fonts";
+.cv-download {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 1.8rem;
+    margin-right: 4rem;
+    z-index: 999;
+
+	.cv-download--label {
+        position: absolute;
+        width: max-content;
+		font-family: $primary-font;
+		font-weight: 700;
+		font-size: 1rem;
+        color: $primary-text-color;
+        display: block;
+        @media only screen and (max-device-width: 750px) and (orientation: portrait),
+        only screen and (max-width: 1020px) and (orientation: landscape) {
+            display: none;
+		}		
+	}
+	.cv-download--label--mobile {
+        position: absolute;
+        width: max-content;
+		font-family: $primary-font;
+		font-weight: 700;
+		font-size: 1rem;
+        color: $primary-text-color;
+        display: block;
+        @media only screen and (max-device-width: 768px),
+        only screen and (max-width: 1024px) and (orientation: landscape) {
+            font-size: 0.7rem;
+        }
+	}
+
+	.download {
+		width: 3rem;
+		height: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+		animation: bounce 2s;
+        fill: $primary-text-color;
+        
+        @media only screen 
+        and (min-device-width: 768px)
+        and (orientation: portrait),
+        only screen 
+        and (min-device-width: 1024px) 
+        and (orientation: landscape) {
+            width: 2.5rem;
+        }
+
+		@media only screen and (max-device-width: 750px) and (orientation: portrait),
+			only screen and (max-width: 1020px) and (orientation: landscape) {
+			display: none;
+        }
+	}
+
+	.download-mobile {
+		width: 2.5rem;
+		height: 2.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+		fill: $primary-text-color;
+		animation: bounce 2s;
+
+		@media only screen and (min-device-width: 750px) and (orientation: portrait),
+			only screen and (min-width: 1020px) and (orientation: landscape) {
+			display: none;
+		}
+	}
+
+
+    @media only screen and (max-device-width: 750px),
+        only screen and (max-width: 1020px) and (orientation: landscape) {
+		top: 0;
+		margin-top: 0.6rem;
+		margin-right: 2.5rem;
+		margin-bottom: 0rem;
+	}
+
+	@keyframes bounce {
+		0%,
+		20%,
+		50%,
+		80%,
+		100% {
+			transform: translate(-50%, 0);
+		}
+		40% {
+			transform: translate(-50%, -30px);
+		}
+		60% {
+			transform: translate(-50%, -15px);
+		}
+	}
+}
+
+.cv-download:hover {
+	label {
+		cursor: pointer;
+	}
+	svg {
+		cursor: pointer;
+		animation: bounce-hover 2s;
+	}
+}
+
+@keyframes bounce-hover {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translate(-50%, 0);
+	}
+	40% {
+		transform: translate(-50%, -6px);
+	}
+	60% {
+		transform: translate(-50%, -4px);
+	}
+}

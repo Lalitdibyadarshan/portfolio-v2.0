@@ -11,25 +11,43 @@ body {
 	background: $primary-color;
 }
 
-.hidden-mobile {
-	@media (max-width: 1023px) {
-		display: none;
-	}
-}
-
-// .hidden-mobile--portrait {
-// 	@media only screen and (max-device-width: 1024px) {
-// 		display: none;
-// 	}
-// 	@media only screen and (max-device-width: 1400px) and (orientation: landscape) {
-// 		display: none;
-// 	}
-// }
-
 .color--highlight {
 	color: $secondary-color;
 }
 
 .color-text--primary {
-    color: $primary-text-color;
+	color: $primary-text-color;
+}
+
+.vertical-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.horizontal-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hidden-desktop {
+	@media only screen and (min-device-width: 750px) and (orientation: portrait),
+		only screen and (min-width: 1020px) and (orientation: landscape) {
+		display: none;
+	}
+}
+
+.hidden-mobile {
+	@media only screen and (max-device-width: 750px), only screen and (max-width: 1020px) and (orientation: landscape) {
+		display: none;
+	}
+}
+
+.background--black {
+	background-color: $primary-color;
 }

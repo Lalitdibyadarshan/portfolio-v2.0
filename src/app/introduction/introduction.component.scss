@@ -11,7 +11,7 @@
 		order: 2;
 		right: 0;
 		position: fixed;
-
+		z-index: 999;
 		.image {
 			height: 100vh;
 		}
@@ -31,11 +31,12 @@
 		border-radius: 10px;
 		padding: 2rem;
 		color: $primary-text-color;
-		background: rgba($dialog-color, 52%);
+		background: rgba($dialog-color, 85%);
 		margin: 5rem;
 		font-family: $primary-font;
-        position: fixed;
-        animation: fadeIn ease 1s;
+        position: relative;
+		animation: fadeIn ease 1s;
+		box-shadow: 18px -14px 30px -19px rgba(0,0,0,0.67);
 
         @media only screen and (min-device-width: 1080px) {
             top: 2rem;
@@ -50,7 +51,8 @@
 			position: relative;
 			margin: 0;
             width: calc(100vw - 8rem);
-            animation: fadeInMobile ease 1s;
+			animation: fadeInMobile ease 1s;
+			margin-bottom: 1rem;
         }
         
         @media only screen and (max-device-width: 1023px) and (orientation: landscape) {
@@ -95,15 +97,10 @@
 			width: 10rem;
 			height: 10rem;
 			position: relative;
-			left: 50%;
-			transform: translateX(-50%);
 
 			.image {
 				width: 75%;
-				left: 50%;
-				top: 50%;
 				position: relative;
-				transform: translate(-50%, -50%);
 			}
 
 			@media only screen and (min-device-width: 1080px) {
@@ -132,7 +129,12 @@
         top: 50%;
         right: 39%;
         transform: translateY(-50%);
+		/***
+			1- Ipad + Desktop(window width max 1200px)
+			2- Tab + Mobile
+			3- up to Ipad pro and landscape mode
 
+		***/
         @media only screen and (min-device-width: 1080px) and (max-width: 1200px),
 			only screen and (max-device-width: 1024px),
 			only screen and (max-device-width: 1400px) and (orientation: landscape) {

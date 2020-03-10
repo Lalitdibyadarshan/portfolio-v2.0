@@ -1,0 +1,54 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+
+.footer-menu {
+	position: fixed;
+	bottom: 0;
+
+	.footer-menu__menu-box {
+		background: $secondary-color;
+		width: max-content;
+		height: 4rem;
+		display: flex;
+        flex-direction: row;
+        box-shadow: 15px -7px 50px -27px rgba(0,0,0,0.76);
+
+		@media only screen and (max-device-width: 750px),
+			only screen and (max-width: 1020px) and (orientation: landscape) {
+			display: none;
+		}
+
+		.menu-box__menu-title {
+			color: $primary-color;
+			font-family: $primary-font;
+			height: 100%;
+			cursor: pointer;
+			width: max-content;
+
+			.title {
+				position: relative;
+                padding: 2.5rem;
+                top: 40%;
+
+                @media only screen 
+                    and (min-device-width: 768px) 
+                    and (max-device-width: 1020px) 
+                    and (orientation: portrait) {
+                        padding: 0.9rem;
+				}
+			}
+		}
+
+		.active {
+			color: $primary-text-color;
+			background-color: rgba($primary-text-color, 0.16);
+			cursor: pointer;
+		}
+
+		.menu-box__menu-title:hover {
+			color: $primary-text-color;
+			background-color: rgba($primary-text-color, 0.16);
+			cursor: pointer;
+		}
+	}
+}
