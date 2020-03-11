@@ -15,8 +15,7 @@ import { SharedModule } from './shared/shared.module';
 		BrowserModule,
 		AppRoutingModule,
 		ParticlesModule,
-		SharedModule,
-		IntroductionModule // TODO: remove this and implement lazy loading
+		SharedModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

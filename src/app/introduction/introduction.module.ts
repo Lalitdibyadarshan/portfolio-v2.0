@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IntroductionComponent } from './introduction.component';
+import { Routes, RouterModule } from '@angular/router';
 
-
+const routes: Routes = [
+  {
+    path: '', component: IntroductionComponent
+  },
+  {
+    path: 'home', component: IntroductionComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -12,7 +20,8 @@ import { IntroductionComponent } from './introduction.component';
     IntroductionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class IntroductionModule { }
